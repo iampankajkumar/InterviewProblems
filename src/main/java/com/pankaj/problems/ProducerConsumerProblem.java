@@ -1,9 +1,9 @@
-package com.pankaj.multithreading;
+package com.pankaj.problems;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProducerConsumer {
+public class ProducerConsumerProblem {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -51,6 +51,7 @@ class PC {
 			synchronized (sharedResource) {
 				// wait until list is full
 				while (sharedResource.size() == MAX_CAPACITY) {
+					System.out.println("Producer waiting for consume..............");
 					sharedResource.wait();
 				}
 
@@ -70,7 +71,8 @@ class PC {
 		while (true) {
 			synchronized (sharedResource) {
 				// wait until list is empty
-				while (sharedResource.size() == 0) {
+				while (sharedResource.isEmpty()) {
+					System.out.println("Consumer waiting for produce..............");
 					sharedResource.wait();
 				}
 				// Consumes one job

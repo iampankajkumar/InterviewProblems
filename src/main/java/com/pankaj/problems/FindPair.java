@@ -1,4 +1,4 @@
-package com.pankaj.algorithm;
+package com.pankaj.problems;
 
 import java.util.HashMap;
 import java.util.Map;

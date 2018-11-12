@@ -1,4 +1,4 @@
-package com.java2novice.algos;
+package com.pankaj.problems;
 
 public class DuplicateNumber {
 

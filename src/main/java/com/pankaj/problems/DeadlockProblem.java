@@ -1,6 +1,6 @@
-package com.pankaj.multithreading;
+package com.pankaj.problems;
 
-public class DeadlockSolution {
+public class DeadlockProblem {
 	public static Object Lock1 = new Object();
 	public static Object Lock2 = new Object();
 
@@ -39,7 +39,7 @@ public class DeadlockSolution {
 		public void run() {
 			while (true) {
 
-				synchronized (Lock1) {
+				synchronized (Lock2) {
 					System.out.println("Thread 2: Holding lock 2...");
 
 					try {
@@ -48,7 +48,7 @@ public class DeadlockSolution {
 					}
 					System.out.println("Thread 2: Waiting for lock 1...");
 
-					synchronized (Lock2) {
+					synchronized (Lock1) {
 						System.out.println("Thread 2: Holding lock 1 & 2...");
 					}
 				}

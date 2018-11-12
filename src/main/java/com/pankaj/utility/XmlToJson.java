@@ -1,4 +1,4 @@
-package com.javainterviewpoint;
+package com.pankaj.utility;
 
 import java.io.IOException;
 

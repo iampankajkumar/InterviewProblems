@@ -1,4 +1,4 @@
-package com.pankaj.algorithm;
+package com.pankaj.problems;
 
 // Java program to find Excel 
 // column name from a given 
